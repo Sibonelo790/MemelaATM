@@ -18,6 +18,7 @@ namespace MemelaATM
 
         }
 
+
         public override bool Withdraw(double amount)
         {
             //Check if amount is valid banknote (R10, R20, R50, R100)
