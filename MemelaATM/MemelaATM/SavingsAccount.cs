@@ -23,6 +23,7 @@ namespace MemelaATM
                 Console.WriteLine($"Error: A minimum balance of R{MinBalance} is required.");
                 return false;
             }
-            return base.Withhdraw(amount);
+            return base.Withdraw(amount);
+        }
     }
 }

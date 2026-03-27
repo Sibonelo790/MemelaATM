@@ -9,15 +9,13 @@ namespace MemelaATM
     public class BankAccount
     {
         //Properties
-        public string Name { get; set; }
         public string AccountNumber { get; set; }
         public string Pin { get; set; }
-        public double Balance { get; private set; }
+        public double Balance { get;  set; }
 
         //Constructor to set up a new account
-        public BankAccount(string name, string accountNumber, string pin, double balance)
+        public BankAccount(string accountNumber, string pin, double balance)
         {
-            Name = name;
             AccountNumber = accountNumber;
             Pin = pin;
             Balance = balance;
@@ -33,7 +31,7 @@ namespace MemelaATM
         }
 
         //Method to withdraw money
-        public virtual bool Withhdraw(double amount)
+        public virtual bool Withdraw(double amount)
         {
             if(amount <= Balance)
             {
