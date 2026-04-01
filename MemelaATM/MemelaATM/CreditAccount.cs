@@ -9,9 +9,10 @@ namespace MemelaATM
     public class CreditAccount : BankAccount
     {
         //Properties
-        public double AnnualInterestRate = 0.24;
-        public double CashAdvanceFeePercent = 0.03;
-        public double MinimumFee = 60;
+        public double AnnualInterestRate { get; set; } = 0.24;
+        public double CashAdvanceFeePercent { get; set; }  = 0.03;
+        public double MinimumFee { get; set; }  = 60;
+
         public CreditAccount(string accountNumber, string pin, double balance) 
             : base(accountNumber, pin, balance)
         {

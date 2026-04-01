@@ -28,6 +28,9 @@ namespace MemelaATM
             {
                 Balance += amount;
             }
+
+            Console.WriteLine($"Deposit was successful\n" +
+                $"Balance is now {Balance}");
         }
 
         //Method to withdraw money
