@@ -11,7 +11,7 @@ namespace MemelaATM
         //Properties
         public string AccountNumber { get; set; }
         public string Pin { get; set; }
-        public double Balance { get; private set; }
+        public double Balance { get;  set; }
 
         //Constructor to set up a new account
         public BankAccount(string accountNumber, string pin, double balance)
@@ -28,10 +28,13 @@ namespace MemelaATM
             {
                 Balance += amount;
             }
+
+            Console.WriteLine($"Deposit was successful\n" +
+                $"Balance is now {Balance}");
         }
 
         //Method to withdraw money
-        public bool Withhdraw(double amount)
+        public virtual bool Withdraw(double amount)
         {
             if(amount <= Balance)
             {
