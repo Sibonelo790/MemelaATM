@@ -11,10 +11,23 @@ namespace MemelaATM
         public string Reference { get; set; }
         public double Amount { get; set; }
 
-        public CardlessService(string reference, double amount) 
+        public CardlessService(string reference, double amount)
         {
             Reference = reference;
             Amount = amount;
+        }
+
+        public bool Withdraw(double amount)
+        {
+            if (amount > Amount)
+            {
+                return false;
+            }
+            else
+            {
+                Amount -= amount;
+                return true;
+            }
         }
 
 
